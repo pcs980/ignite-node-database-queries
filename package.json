@@ -4,6 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "docker:pg": "docker run -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=docker -e POSTGRES_DB=queries_challenge --rm postgres",
+    "typeorm": "ts-node ./node_modules/typeorm/cli",
     "lint:fix": "eslint --fix src --ext ts,tsx",
     "test": "jest"
   },
